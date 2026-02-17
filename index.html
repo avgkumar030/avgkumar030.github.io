@@ -31,10 +31,10 @@
             background: rgba(17, 24, 39, 0.6);
         }
 
-        .floating { animation: floating 3s infinite ease-in-out; }
+        .floating { animation: floating 4s infinite ease-in-out; }
         @keyframes floating {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
 
@@ -68,22 +68,28 @@
         </header>
 
         <section class="mb-24">
-            <h2 class="text-sm uppercase tracking-[0.3em] text-gray-500 font-bold mb-10 text-center md:text-left">Targeting Future Hardware</h2>
+            <h2 class="text-sm uppercase tracking-[0.3em] text-gray-500 font-bold mb-10 text-center md:text-left">Target Platforms</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="glass-card p-6 rounded-3xl flex flex-col items-center">
-                    <img src="http://googleusercontent.com/image_collection/image_retrieval/16116834416689045971_0" alt="Apple Vision Pro" class="w-32 h-32 object-contain mb-4 floating">
+                <div class="glass-card p-8 rounded-3xl flex flex-col items-center">
+                    <div class="h-32 flex items-center mb-4">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/5867939047049535492_0" alt="Apple Vision Pro" class="max-h-full w-auto floating">
+                    </div>
                     <h4 class="text-white font-bold">Vision Pro</h4>
                     <p class="text-xs text-gray-500 mt-1">VisionOS / RealityKit</p>
                 </div>
-                <div class="glass-card p-6 rounded-3xl flex flex-col items-center">
-                    <img src="http://googleusercontent.com/image_collection/image_retrieval/3775415927959667428_0" alt="iPhone 15 Pro" class="w-32 h-32 object-contain mb-4 floating" style="animation-delay: 0.5s;">
+                <div class="glass-card p-8 rounded-3xl flex flex-col items-center">
+                    <div class="h-32 flex items-center mb-4">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/1095754188201601468_0" alt="iPhone 16 Pro" class="max-h-full w-auto floating" style="animation-delay: 0.5s;">
+                    </div>
                     <h4 class="text-white font-bold">iPhone</h4>
-                    <p class="text-xs text-gray-500 mt-1">ARKit / Metal</p>
+                    <p class="text-xs text-gray-500 mt-1">ARKit / iOS</p>
                 </div>
-                <div class="glass-card p-6 rounded-3xl flex flex-col items-center">
-                    <img src="http://googleusercontent.com/image_collection/image_retrieval/8490086363645293325_0" alt="Meta Quest 3" class="w-32 h-32 object-contain mb-4 floating" style="animation-delay: 1s;">
+                <div class="glass-card p-8 rounded-3xl flex flex-col items-center">
+                    <div class="h-32 flex items-center mb-4">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/16443641597886106649_0" alt="Meta Quest 3" class="max-h-full w-auto floating" style="animation-delay: 1s;">
+                    </div>
                     <h4 class="text-white font-bold">Meta Quest 3</h4>
-                    <p class="text-xs text-gray-500 mt-1">Spatial Design</p>
+                    <p class="text-xs text-gray-500 mt-1">OpenXR / Spatial Design</p>
                 </div>
             </div>
         </section>
@@ -94,7 +100,7 @@
             </div>
             <div id="repo-container" class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
                 <div class="col-span-full glass-card p-12 rounded-3xl border-dashed border-gray-800">
-                    <p class="text-gray-400">Fetching latest Swift and AR experiments...</p>
+                    <p class="text-gray-400">Syncing with GitHub repositories...</p>
                 </div>
             </div>
         </section>
@@ -123,7 +129,7 @@
                             <a href="${repo.html_url}" target="_blank" class="block animate__animated animate__fadeInUp" style="animation-delay: ${i*0.1}s">
                                 <div class="glass-card p-8 rounded-3xl h-full">
                                     <h3 class="text-xl font-bold text-white mb-2">${repo.name}</h3>
-                                    <p class="text-gray-400 text-sm mb-4">${repo.description || 'Swift/AR research project.'}</p>
+                                    <p class="text-gray-400 text-sm mb-4">${repo.description || 'Spatial experiment and research lab.'}</p>
                                     <span class="text-[10px] font-black uppercase text-blue-400 tracking-widest">${repo.language || 'Swift'}</span>
                                 </div>
                             </a>`;
