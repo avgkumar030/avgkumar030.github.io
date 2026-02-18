@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Portfolio | Gemini</title>
     <style>
         * {
             margin: 0;
@@ -12,136 +12,126 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: #ffffff;
-            color: #111;
+            color: #1a1a1a;
             line-height: 1.6;
             display: flex;
             justify-content: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
         }
 
         .container {
-            max-width: 600px;
+            max-width: 550px;
             width: 100%;
         }
 
         /* Headshot Styling */
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            background-color: #eee;
-            margin-bottom: 2rem;
-            display: block;
+            margin-bottom: 1.5rem;
+            border: 1px solid #eee;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.03em;
         }
 
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #666;
             margin-bottom: 2rem;
         }
 
-        .bio {
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
+        .content {
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
         }
 
         section {
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         h2 {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #999;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+            color: #a1a1a1;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 0.4rem;
         }
 
-        .project-link {
-            display: block;
+        .item {
+            margin-bottom: 1.2rem;
             text-decoration: none;
-            color: #111;
-            margin-bottom: 1.5rem;
+            display: block;
+            color: inherit;
         }
 
-        .project-link:hover h3 {
-            text-decoration: underline;
+        .item h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
         }
 
-        .project-link h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .project-link p {
-            font-size: 1rem;
+        .item p {
+            font-size: 0.95rem;
             color: #666;
         }
 
         footer {
-            margin-top: 5rem;
-            font-size: 0.9rem;
-            color: #999;
+            margin-top: 4rem;
+            display: flex;
+            gap: 20px;
         }
 
         footer a {
-            color: #111;
+            color: #0066cc;
             text-decoration: none;
-            margin-right: 15px;
+            font-size: 0.95rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="your-headshot.jpg" alt="My Headshot" class="profile-img">
+        <img src="profit.jpg" alt="Portfolio Headshot" class="profile-img">
 
         <header>
             <h1>Your Name</h1>
-            <p class="subtitle">Designer & Developer</p>
+            <p class="subtitle">Creative Technologist & Designer</p>
         </header>
 
-        <main>
-            <section class="bio">
-                <p>I build clean, functional interfaces and focus on the intersection of design and technology. Currently exploring spatial computing and minimalist web architecture.</p>
-            </section>
-
-            <section id="work">
-                <h2>Selected Work</h2>
-                
-                <a href="#" class="project-link">
-                    <h3>Project One</h3>
-                    <p>A short description of what you did and the impact it had.</p>
-                </a>
-
-                <a href="#" class="project-link">
-                    <h3>Project Two</h3>
-                    <p>Brief details about the tech stack or the design process involved.</p>
-                </a>
-            </section>
-
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>Available for new opportunities. Feel free to reach out via email.</p>
-            </section>
+        <main class="content">
+            <p>I specialize in building clean digital experiences and exploring the boundaries of spatial interfaces. I believe in a "less but better" approach to design and code.</p>
         </main>
 
+        <section>
+            <h2>Focus</h2>
+            <div class="item">
+                <h3>Interface Design</h3>
+                <p>Focusing on high-fidelity, user-centric web and mobile layouts.</p>
+            </div>
+            <div class="item">
+                <h3>Frontend Architecture</h3>
+                <p>Building scalable, performant systems with modern web standards.</p>
+            </div>
+        </section>
+
         <footer>
-            <a href="mailto:hello@example.com">Email</a>
+            <a href="mailto:your-email@example.com">Email</a>
             <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
+            <a href="#">GitHub</a>
         </footer>
     </div>
 
