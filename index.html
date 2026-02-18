@@ -3,137 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Gemini</title>
+    <title>Goutham Anugunti | Staff Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root { --bg: #030712; --card: #111827; --accent: #3b82f6; }
+        body { background-color: var(--bg); color: #e5e7eb; overflow-x: hidden; }
+        
+        /* Animated Background Aura */
+        .aura {
+            position: fixed; top: -10%; left: -10%; width: 40%; height: 40%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1; animation: drift 20s infinite alternate;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #ffffff;
-            color: #1a1a1a;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            padding: 60px 20px;
+        @keyframes drift {
+            from { transform: translate(0, 0); }
+            to { transform: translate(50vw, 50vh); }
         }
 
-        .container {
-            max-width: 550px;
-            width: 100%;
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        /* Headshot Styling */
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1.5rem;
-            border: 1px solid #eee;
+        .glass-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(59, 130, 246, 0.1);
         }
 
-        h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-            letter-spacing: -0.03em;
+        .profile-glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            animation: pulse 4s infinite;
         }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 2rem;
-        }
-
-        .content {
-            font-size: 1.05rem;
-            margin-bottom: 2.5rem;
-        }
-
-        section {
-            margin-bottom: 2.5rem;
-        }
-
-        h2 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #a1a1a1;
-            margin-bottom: 1.2rem;
-            border-bottom: 1px solid #f0f0f0;
-            padding-bottom: 0.4rem;
-        }
-
-        .item {
-            margin-bottom: 1.2rem;
-            text-decoration: none;
-            display: block;
-            color: inherit;
-        }
-
-        .item h3 {
-            font-size: 1.05rem;
-            font-weight: 600;
-        }
-
-        .item p {
-            font-size: 0.95rem;
-            color: #666;
-        }
-
-        footer {
-            margin-top: 4rem;
-            display: flex;
-            gap: 20px;
-        }
-
-        footer a {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+            50% { box-shadow: 0 0 35px rgba(59, 130, 246, 0.6); }
         }
     </style>
 </head>
-<body>
-
-    <div class="container">
-        <img src="profit.jpg" alt="Portfolio Headshot" class="profile-img">
-
-        <header>
-            <h1>Your Name</h1>
-            <p class="subtitle">Creative Technologist & Designer</p>
+<body class="font-sans antialiased">
+    <div class="aura"></div>
+    
+    <div class="max-w-4xl mx-auto px-6 py-16">
+        <header class="mb-20 flex flex-col md:flex-row items-center gap-10 text-center md:text-left animate__animated animate__fadeIn">
+            <div class="relative">
+                <img src="profile.jpg" alt="Goutham Anugunti" 
+                     class="w-40 h-40 rounded-full profile-glow object-cover border-2 border-blue-500/50">
+                <div class="absolute -bottom-2 -right-2 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full border-2 border-gray-900">
+                    Staff
+                </div>
+            </div>
+            
+            <div class="flex-1">
+                <h1 class="text-5xl font-extrabold text-white tracking-tight">Goutham Anugunti</h1>
+                <p class="text-2xl font-medium text-blue-400 mt-3">Staff Software Engineer @ Quintar</p>
+                <p class="mt-6 text-gray-400 leading-relaxed max-w-xl">
+                    Architecting spatial experiences in the <span class="text-white font-semibold">San Diego Metro Area</span>. 
+                    Specializing in ARKit, Swift, and pushing the boundaries of sports-tech reality.
+                </p>
+                
+                <div class="mt-8 flex gap-6 justify-center md:justify-start">
+                    <a href="https://www.linkedin.com/in/goutham-anugunti-946297b0/" target="_blank" class="hover:text-blue-400 transition-colors flex items-center gap-2">
+                        <span>LinkedIn</span> ↗
+                    </a>
+                    <a href="https://github.com/avgkumar030" target="_blank" class="hover:text-blue-400 transition-colors flex items-center gap-2">
+                        <span>GitHub</span> ↗
+                    </a>
+                </div>
+            </div>
         </header>
 
-        <main class="content">
-            <p>I specialize in building clean digital experiences and exploring the boundaries of spatial interfaces. I believe in a "less but better" approach to design and code.</p>
-        </main>
-
         <section>
-            <h2>Focus</h2>
-            <div class="item">
-                <h3>Interface Design</h3>
-                <p>Focusing on high-fidelity, user-centric web and mobile layouts.</p>
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-bold text-white">The Playground</h2>
+                <span class="text-xs uppercase tracking-widest text-gray-500 font-bold">Live from GitHub API</span>
             </div>
-            <div class="item">
-                <h3>Frontend Architecture</h3>
-                <p>Building scalable, performant systems with modern web standards.</p>
+            
+            <div id="repo-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="h-48 glass-card rounded-2xl animate-pulse"></div>
+                <div class="h-48 glass-card rounded-2xl animate-pulse"></div>
             </div>
         </section>
 
-        <footer>
-            <a href="mailto:your-email@example.com">Email</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
+        <footer class="mt-32 pt-10 border-t border-gray-800/50 text-center">
+            <p class="text-gray-500 text-sm">© 2026 Goutham Anugunti • Powered by Swift & Spatial Logic</p>
         </footer>
     </div>
 
+    <script>
+        async function fetchRepos() {
+            const username = 'avgkumar030';
+            const container = document.getElementById('repo-container');
+            
+            try {
+                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=12`);
+                const repos = await response.json();
+                
+                container.innerHTML = ''; 
+
+                repos.forEach((repo, index) => {
+                    if (repo.name === username || repo.name === `${username}.github.io`) return;
+
+                    const card = `
+                        <a href="${repo.html_url}" target="_blank" 
+                           class="block animate__animated animate__fadeInUp" 
+                           style="animation-delay: ${index * 0.1}s">
+                            <div class="glass-card p-8 rounded-2xl h-full flex flex-col">
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="text-xl font-bold text-white">${repo.name}</h3>
+                                        <span class="text-blue-500 text-xs font-mono">/0${index + 1}</span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                                        ${repo.description || 'Exploring the capabilities of Swift and AR components.'}
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-[10px] font-bold rounded-full uppercase tracking-tighter">
+                                        ${repo.language || 'Swift'}
+                                    </span>
+                                    ${repo.stargazers_count > 0 ? `<span class="text-xs text-gray-500">⭐ ${repo.stargazers_count}</span>` : ''}
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                    container.innerHTML += card;
+                });
+            } catch (error) {
+                container.innerHTML = '<p class="col-span-2 text-center text-red-400">Failed to sync with the playground. Refreshing might help.</p>';
+            }
+        }
+
+        fetchRepos();
+    </script>
 </body>
 </html>
