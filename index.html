@@ -44,6 +44,16 @@
             0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
             50% { box-shadow: 0 0 35px rgba(59, 130, 246, 0.6); }
         }
+
+        .btn-resume {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-resume:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -52,7 +62,7 @@
     <div class="max-w-4xl mx-auto px-6 py-16">
         <header class="mb-20 flex flex-col md:flex-row items-center gap-10 text-center md:text-left animate__animated animate__fadeIn">
             <div class="relative">
-                <img src="profile.jpg" alt="Goutham Anugunti" 
+                <img src="profit.jpg" alt="Goutham Anugunti" 
                      class="w-40 h-40 rounded-full profile-glow object-cover border-2 border-blue-500/50">
                 <div class="absolute -bottom-2 -right-2 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full border-2 border-gray-900">
                     Staff
@@ -61,19 +71,25 @@
             
             <div class="flex-1">
                 <h1 class="text-5xl font-extrabold text-white tracking-tight">Goutham Anugunti</h1>
-                <p class="text-2xl font-medium text-blue-400 mt-3">Staff Software Engineer @ Quintar</p>
-                <p class="mt-6 text-gray-400 leading-relaxed max-w-xl">
-                    Architecting <span class="text-white font-semibold">spatial experiences</span> in the <span class="text-white font-semibold">San Diego Metro Area</span>. 
-                    Specializing in AR (Swift / Kotlin) and pushing the boundaries of sports-tech reality.
-                </p>
+                <p class="text-2xl font-medium text-blue-400 mt-2">Staff Software Engineer @ Quintar</p>
                 
-                <div class="mt-8 flex gap-6 justify-center md:justify-start">
-                    <a href="https://www.linkedin.com/in/goutham-anugunti-946297b0/" target="_blank" class="hover:text-blue-400 transition-colors flex items-center gap-2">
-                        <span>LinkedIn</span> ↗
+                <div class="mt-4 text-gray-400 leading-relaxed max-w-xl">
+                    <p>Building at the intersection of design and code. I advocate for minimalist aesthetics and high-performance frontend systems spanning <b>phones</b>, <b>headsets</b>, and <b>AI glasses</b>.</p>
+                </div>
+                
+                <div class="mt-8 flex flex-wrap gap-6 justify-center md:justify-start items-center">
+                    <a href="Goutham_Anugunti_Resume.pdf" target="_blank" class="btn-resume text-white px-6 py-2 rounded-lg font-bold flex items-center gap-2">
+                        📄 Download Resume
                     </a>
-                    <a href="https://github.com/avgkumar030" target="_blank" class="hover:text-blue-400 transition-colors flex items-center gap-2">
-                        <span>GitHub</span> ↗
-                    </a>
+                    
+                    <div class="flex gap-6">
+                        <a href="https://www.linkedin.com/in/goutham-anugunti-946297b0/" target="_blank" class="hover:text-blue-400 transition-colors flex items-center gap-2">
+                            <span>LinkedIn</span> ↗
+                        </a>
+                        <a href="https://github.com/avgkumar030" target="_blank" class="hover:text-blue-400 transition-colors flex items-center gap-2">
+                            <span>GitHub</span> ↗
+                        </a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -91,7 +107,7 @@
         </section>
 
         <footer class="mt-32 pt-10 border-t border-gray-800/50 text-center">
-            <p class="text-gray-500 text-sm">© 2026 Goutham Anugunti • Powered by Swift & Spatial Logic</p>
+            <p class="text-gray-500 text-sm">© 2026 Goutham Anugunti • <a href="Goutham_Anugunti_Resume.pdf" class="hover:text-blue-400">Resume</a> • Powered by Spatial Logic</p>
         </footer>
     </div>
 
@@ -120,12 +136,12 @@
                                         <span class="text-blue-500 text-xs font-mono">/0${index + 1}</span>
                                     </div>
                                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                                        ${repo.description || 'Exploring the capabilities of Swift and AR components.'}
+                                        ${repo.description || 'Exploring the boundaries of AR, AI capabilities, and high-performance systems.'}
                                     </p>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-[10px] font-bold rounded-full uppercase tracking-tighter">
-                                        ${repo.language || 'Swift'}
+                                        ${repo.language || 'Code'}
                                     </span>
                                     ${repo.stargazers_count > 0 ? `<span class="text-xs text-gray-500">⭐ ${repo.stargazers_count}</span>` : ''}
                                 </div>
